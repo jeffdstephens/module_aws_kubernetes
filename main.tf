@@ -137,7 +137,7 @@ resource "local_file" "kubeconfig" {
     - name: ${aws_eks_cluster.ms-up-running.arn}
       user:
         exec:
-            apiVersion: client.authentication.k8s.io/v1beta1
+            apiVersion: client.authentication.k8s.io/v1
             command: aws-iam-authenticator
             args:
               - "token"
